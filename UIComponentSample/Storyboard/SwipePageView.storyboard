@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MG9-4l-IwX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Source-->
+        <scene sceneID="88z-te-Wcj">
+            <objects>
+                <viewController id="MG9-4l-IwX" customClass="SwipePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOA-6a-mYU"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3k-Yj-4zw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7xX-Ki-xvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3T9-lC-Tvj" customClass="SwipePageView">
+                                <rect key="frame" x="0.0" y="36" width="375" height="440"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="440" id="1f0-t9-JcD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="MG9-4l-IwX" id="Zm4-ya-Ge0"/>
+                                    <outlet property="delegate" destination="MG9-4l-IwX" id="POS-vZ-Xsy"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-gh-Kys">
+                                <rect key="frame" x="0.0" y="50" width="38" height="412"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="lvE-W2-Kd2"/>
+                                </constraints>
+                                <state key="normal" image="btn_arrow_left"/>
+                                <connections>
+                                    <action selector="onClickLeftButton:" destination="MG9-4l-IwX" eventType="touchUpInside" id="LRB-kx-h1H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-R0-0dB">
+                                <rect key="frame" x="337" y="50" width="38" height="412"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="TLj-9k-lmH"/>
+                                </constraints>
+                                <state key="normal" image="btn_arrow_right"/>
+                                <connections>
+                                    <action selector="onClickRightButton:" destination="MG9-4l-IwX" eventType="touchUpInside" id="hQG-7S-EUC"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ppy-nu-Dla">
+                                <rect key="frame" x="152" y="439" width="71" height="37"/>
+                                <color key="pageIndicatorTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0078431372549019607" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ujp-R0-0dB" secondAttribute="trailing" id="2cO-ef-wky"/>
+                            <constraint firstItem="3T9-lC-Tvj" firstAttribute="top" secondItem="bOA-6a-mYU" secondAttribute="bottom" constant="16" id="2wM-be-b1U"/>
+                            <constraint firstItem="ppy-nu-Dla" firstAttribute="centerX" secondItem="7xX-Ki-xvf" secondAttribute="centerX" id="C9U-vL-i8G"/>
+                            <constraint firstItem="3T9-lC-Tvj" firstAttribute="leading" secondItem="7xX-Ki-xvf" secondAttribute="leading" id="WHK-EH-vJ3"/>
+                            <constraint firstItem="kP9-gh-Kys" firstAttribute="centerY" secondItem="3T9-lC-Tvj" secondAttribute="centerY" id="Whg-z9-PZc"/>
+                            <constraint firstItem="kP9-gh-Kys" firstAttribute="leading" secondItem="7xX-Ki-xvf" secondAttribute="leading" id="fIk-Yg-iVY"/>
+                            <constraint firstItem="Ujp-R0-0dB" firstAttribute="centerY" secondItem="3T9-lC-Tvj" secondAttribute="centerY" id="mZ1-PF-CS4"/>
+                            <constraint firstItem="Ujp-R0-0dB" firstAttribute="top" secondItem="bOA-6a-mYU" secondAttribute="bottom" constant="30" id="q7C-uf-Kr7"/>
+                            <constraint firstAttribute="trailing" secondItem="3T9-lC-Tvj" secondAttribute="trailing" id="qId-mR-Y1T"/>
+                            <constraint firstItem="ppy-nu-Dla" firstAttribute="bottom" secondItem="3T9-lC-Tvj" secondAttribute="bottom" id="tQL-Kp-1UQ"/>
+                            <constraint firstItem="kP9-gh-Kys" firstAttribute="top" secondItem="bOA-6a-mYU" secondAttribute="bottom" constant="30" id="xJY-Re-d4I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="ppy-nu-Dla" id="tC7-dp-2FN"/>
+                        <outlet property="swipePageView" destination="3T9-lC-Tvj" id="cXR-YQ-eRn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQ2-Si-eXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154.40000000000001" y="-483.50824587706148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_arrow_left" width="12" height="22"/>
+        <image name="btn_arrow_right" width="12" height="22"/>
+    </resources>
+</document>

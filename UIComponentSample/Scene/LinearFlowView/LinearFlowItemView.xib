@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LinearFlowItemView">
+            <connections>
+                <outlet property="imageView" destination="FWq-SL-uax" id="T0B-os-p2T"/>
+                <outlet property="label" destination="yqa-uS-Sds" id="BOH-l3-G2A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTS-gL-1IQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWq-SL-uax">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="118" id="o0L-4n-DK6"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao1-Ps-tTv">
+                            <rect key="frame" x="0.0" y="118" width="375" height="58"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-uS-Sds">
+                                    <rect key="frame" x="16" y="18.5" width="343" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="yqa-uS-Sds" firstAttribute="centerX" secondItem="ao1-Ps-tTv" secondAttribute="centerX" id="5Pf-fR-3dD"/>
+                                <constraint firstItem="yqa-uS-Sds" firstAttribute="centerY" secondItem="ao1-Ps-tTv" secondAttribute="centerY" id="ATb-Ai-V9N"/>
+                                <constraint firstAttribute="trailing" secondItem="yqa-uS-Sds" secondAttribute="trailing" constant="16" id="XXF-4B-E1y"/>
+                                <constraint firstItem="yqa-uS-Sds" firstAttribute="leading" secondItem="ao1-Ps-tTv" secondAttribute="leading" constant="16" id="pgI-TL-sj3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ao1-Ps-tTv" secondAttribute="bottom" constant="24" id="5Yz-Rg-bQw"/>
+                        <constraint firstItem="FWq-SL-uax" firstAttribute="top" secondItem="jTS-gL-1IQ" secondAttribute="top" id="Gkp-xg-A91"/>
+                        <constraint firstItem="ao1-Ps-tTv" firstAttribute="top" secondItem="FWq-SL-uax" secondAttribute="bottom" id="Y81-SI-cnz"/>
+                        <constraint firstAttribute="trailing" secondItem="ao1-Ps-tTv" secondAttribute="trailing" id="iKm-bG-o2E"/>
+                        <constraint firstItem="FWq-SL-uax" firstAttribute="leading" secondItem="jTS-gL-1IQ" secondAttribute="leading" id="kEY-Uq-rDg"/>
+                        <constraint firstAttribute="trailing" secondItem="FWq-SL-uax" secondAttribute="trailing" id="kIa-zv-qSX"/>
+                        <constraint firstItem="ao1-Ps-tTv" firstAttribute="leading" secondItem="jTS-gL-1IQ" secondAttribute="leading" id="zJz-sQ-WTn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jTS-gL-1IQ" secondAttribute="bottom" id="8ZX-Xz-fAi"/>
+                <constraint firstAttribute="trailing" secondItem="jTS-gL-1IQ" secondAttribute="trailing" id="N4q-6b-Iap"/>
+                <constraint firstItem="jTS-gL-1IQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wi2-I8-lP0"/>
+                <constraint firstItem="jTS-gL-1IQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n6e-M6-tZ3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="130.40000000000001" y="145.72713643178412"/>
+        </view>
+    </objects>
+</document>

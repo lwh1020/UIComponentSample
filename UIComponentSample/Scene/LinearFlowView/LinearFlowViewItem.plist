@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>SG_D_1_L005</string>
+		<key>title</key>
+		<string>SG_D_1_L005</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>SG_D_2_L005</string>
+		<key>title</key>
+		<string>SG_D_2_L005</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>SG_D_3_L005</string>
+		<key>title</key>
+		<string>SG_D_3_L005</string>
+	</dict>
+</array>
+</plist>

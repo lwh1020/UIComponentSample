@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2vI-RJ-b1C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rating View Controller-->
+        <scene sceneID="lpN-th-Wv9">
+            <objects>
+                <viewController id="2vI-RJ-b1C" customClass="RatingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PAm-Jd-cXu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ukz-bU-V4W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lLU-f6-4ej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwr-Si-Ube" customClass="RatingView">
+                                <rect key="frame" x="107.5" y="151" width="160" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="G5u-ke-ffC"/>
+                                    <constraint firstAttribute="height" constant="32" id="MEg-5o-Big"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ha8-wn-JJz">
+                                <rect key="frame" x="85.5" y="252" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bno-Vp-9yO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="2vI-RJ-b1C" eventType="valueChanged" id="Cm8-PQ-nve"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dwr-Si-Ube" firstAttribute="centerX" secondItem="lLU-f6-4ej" secondAttribute="centerX" id="606-aZ-E3C"/>
+                            <constraint firstItem="Ha8-wn-JJz" firstAttribute="centerY" secondItem="lLU-f6-4ej" secondAttribute="centerY" multiplier="0.8" id="CjS-Vf-iox"/>
+                            <constraint firstItem="Ha8-wn-JJz" firstAttribute="centerX" secondItem="lLU-f6-4ej" secondAttribute="centerX" id="aBx-1V-JBN"/>
+                            <constraint firstItem="Dwr-Si-Ube" firstAttribute="centerY" secondItem="lLU-f6-4ej" secondAttribute="centerY" multiplier="0.5" id="xiN-oO-Jdn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ratingView" destination="Dwr-Si-Ube" id="meT-Us-eSa"/>
+                        <outlet property="slider" destination="Ha8-wn-JJz" id="E55-PL-J8R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ome-6q-mi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.5999999999999996" y="23.838080959520241"/>
+        </scene>
+    </scenes>
+</document>

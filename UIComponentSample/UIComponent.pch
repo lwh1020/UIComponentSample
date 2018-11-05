@@ -1,0 +1,34 @@
+//
+//  UIComponent.pch
+//  UIComponentSample
+//
+//  Created by ibank on 2018. 10. 17..
+//  Copyright © 2018년 ibank. All rights reserved.
+//
+
+#ifndef UIComponent_pch
+#define UIComponent_pch
+
+#import "CommonViewController.h"
+#import "AppUtility.h"
+#import "ConnectionManager.h"
+#import "ImageDownloader.h"
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define STATUS_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height - 20)
+
+// 로컬라이징
+#define Localize( s,desc, ... ) [NSString stringWithFormat:(NSLocalizedString( s, desc)), ##__VA_ARGS__]
+
+// HEX코드로 UIColor 초기화
+#define UIColorFromRGBA(rgbValue, alphaValue)\
+([UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
+blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 \
+alpha:alphaValue])
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* UIComponent_pch */
